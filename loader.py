@@ -5,4 +5,4 @@ from services.queue_manager import UniversalQueue
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
-queue_manager = UniversalQueue(bot, send_delay=1.0, check_delay=1.0)
+queue_manager = UniversalQueue(bot, send_delay=0.35, check_delay=1.0)
