@@ -1,4 +1,4 @@
-from aiogram.types import InlineKeyboardMarkup
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from models.database import bot_data
 
@@ -19,7 +19,8 @@ def settings_menu_keyboard() -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()
     builder.button(text="📌 Мой чат", callback_data="settings_my_chat"); builder.button(text="📢 Мой канал", callback_data="settings_my_channel")
     builder.button(text="⏱ Интервал", callback_data="settings_my_interval"); builder.button(text="🔗 Ссылка приглашения", callback_data="settings_invite_link")
-    builder.button(text="🔔 Проверка подписки", callback_data="settings_sub_check"); builder.button(text="💬 Стартовое сообщение", callback_data="settings_start_msg")
+    builder.button(text="🔔 Проверка подписки", callback_data="settings_sub_check")
+    builder.button(text="💬 Стартовое сообщение", callback_data="settings_start_msg")
     builder.button(text="🎫 Настройки ЛОТО", callback_data="settings_loto"); builder.button(text="⚓ Настройки Морского боя", callback_data="settings_sea_battle")
     builder.button(text="📋 Все чаты", callback_data="settings_chats")
     builder.button(text="📋 Список финалистов Лото", callback_data="settings_finalists_loto"); builder.button(text="📋 Список финалистов МБ", callback_data="settings_finalists_sea")
