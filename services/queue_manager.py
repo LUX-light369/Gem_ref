@@ -4,7 +4,7 @@ from typing import Callable, Awaitable, Any, Dict
 from aiogram.exceptions import TelegramRetryAfter
 
 class UniversalQueue:
-    def __init__(self, bot, send_delay: float = 1.0, check_delay: float = 1.0):
+    def __init__(self, bot, send_delay: float = 0.35, check_delay: float = 1.0):
         self.bot = bot
         self.send_delay = send_delay
         self.check_delay = check_delay
