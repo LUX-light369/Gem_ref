@@ -15,7 +15,7 @@ def is_recent_card(registered_at: datetime) -> bool:
     return (now_novosibirsk() - registered_at) <= timedelta(days=CARD_LIFETIME_DAYS)
 
 def parse_list(text: str) -> List[str]:
-    return [p.strip() for p in re.split(r'[,\s]+', text.strip()) if p.strip()]
+    return [p.strip() for p in re.split(r'[,\s\n]+', text.strip()) if p.strip()]
 
 def parse_cells(cells: List[str]) -> Set[Tuple[int, int]]:
     result = set()
